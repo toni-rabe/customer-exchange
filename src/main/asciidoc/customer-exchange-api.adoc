@@ -1,0 +1,40 @@
+= Customer Exchange API
+
+== API Description
+
+=== POST - Create Message
+
+operation::post-customer-message[snippets='request-headers,request-fields,response-fields']
+
+==== Example-1 - Create a message sent by a customer.
+operation::post-customer-message[snippets='curl-request,http-request,http-response']
+==== Example-2 - Create a message sent by customer service.
+operation::post-customer-service-message[snippets='curl-request,http-request,http-response']
+
+=== POST - Create customer case
+
+operation::post-customer-case[snippets='request-headers,request-fields,response-fields']
+
+==== Example - Create a customer case including previous customer message
+operation::post-customer-case[snippets='curl-request,http-request,http-response']
+
+=== PATCH - Add a message to a customer case
+
+operation::patch-add-message[snippets='request-headers,path-parameters,request-fields,response-fields']
+
+==== Example - Add customer service message to customer case
+operation::patch-add-message[snippets='curl-request,http-request,http-response']
+
+=== PUT - Update customer case
+
+operation::put-customer-case-reference[snippets='request-headers,path-parameters,request-fields,response-fields']
+
+==== Example - Update created customer case with customer reference
+operation::put-customer-case-reference[snippets='curl-request,http-request,http-response']
+
+=== GET - All customer cases
+
+operation::get-all[snippets='response-fields']
+
+==== Example - Get all customer cases, should include the single case
+operation::get-all[snippets='curl-request,http-request,http-response']
